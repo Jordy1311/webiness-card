@@ -1,7 +1,7 @@
 const cron = require('node-cron');
 const axios = require('axios');
 
-const EVERY_5_SECONDS = '*/5 * * * * *'
+const EVERY_5_SECONDS = '*/5 * * * * *';
 
 const ipApis: string[] = [
   'https://ip.seeip.org/',
@@ -15,19 +15,19 @@ function isValidIpv4Address(address: string): boolean {
 }
 
 async function getExternalIpAddress(): Promise<string> {
-  let externalIpAddress: string = 'not found';
+  let externalIpAddress: string = '';
 
   for (const ipApi of ipApis) {
     try {
       const response = await axios.get(ipApi);
-      const ipAddress = response.data;
+      const ipAddress = response.data as string;
 
       if (isValidIpv4Address(ipAddress)) {
         externalIpAddress = ipAddress;
         break;
       }
     } catch (err) {
-      console.log(`[111] ${err}`);
+      console.error(`${err}`);
       continue;
     }
   }
@@ -37,7 +37,14 @@ async function getExternalIpAddress(): Promise<string> {
 
 export default function() {
   return cron.schedule(EVERY_5_SECONDS, async () => {
-    const externalIpAddress = await getExternalIpAddress();
-    console.log('My ip address is: ', externalIpAddress);
+    const currentExternalIpAddress = await getExternalIpAddress();
+
+    if (!currentExternalIpAddress) {
+      console.warn('IP address not found after checking all APIs')
+    } 
+    
+    if (currentExternalIpAddress) {
+      console.log('My IP address is: ', currentExternalIpAddress);
+    }
   });
 }
