@@ -1,8 +1,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
-dotenv.config();
-
 import dnsCron from './dns-cron';
+
+dotenv.config();
 dnsCron();
 
 const app = express();

@@ -1,7 +1,7 @@
 const cron = require('node-cron');
 const axios = require('axios');
 
-const EVERY_5_SECONDS = '*/5 * * * * *';
+const EVERY_60_SECONDS = '*/60 * * * * *';
 
 const ipApis: string[] = [
   'https://ip.seeip.org/',
@@ -36,7 +36,7 @@ async function getExternalIpAddress(): Promise<string> {
 }
 
 export default function() {
-  return cron.schedule(EVERY_5_SECONDS, async () => {
+  return cron.schedule(EVERY_60_SECONDS, async () => {
     const currentExternalIpAddress = await getExternalIpAddress();
 
     if (!currentExternalIpAddress) {
