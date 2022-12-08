@@ -1,0 +1,5 @@
+<footer>
+  <h3>Hosted on my <a href="https://www.raspberrypi.com/products/raspberry-pi-4-model-b/" target="_blank">Raspberry Pi</a></h3>
+  <p>CPU: <%= it.piCpuTemp %>°</p>
+  <p>Fan: <%= it.piFanSpeed %></p>
+</footer>

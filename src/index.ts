@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import dnsCron from './dns-cron';
+import * as eta from "eta";
 
 dotenv.config();
 dnsCron();
@@ -8,10 +9,16 @@ dnsCron();
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.engine("eta", eta.renderFile);
+app.set("view engine", "eta");
+app.set("views", "./views")
 app.use(express.static('public'));
 
-app.get('/', (_, res) => {
-  res.send('Hello world!');
+app.get("/", function (_, res) {
+  res.render("home", {
+    piCpuTemp: 32,
+    piFanSpeed: 1200,
+  });
 });
 
 app.listen(port, () => {
