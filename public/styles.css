@@ -1,0 +1,117 @@
+:root {
+  --visited-selected: #444444;
+  --grey: #797979;
+  --pink: #ec7b85;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+/* work this out */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --visited-selected: #fefefe;
+    --grey: #929292;
+    --pink: #ec7b85;
+    --white: #797979;
+    background-color: #202020;
+  }
+
+  .social-link:hover, .social-link:focus {
+  }
+}
+
+:focus {
+  outline: 2px solid var(--pink);
+  outline-offset: 8px;
+  border-radius: 8px;
+}
+
+html {
+  height: 100vh;
+  width: 100vw;
+
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.25em;
+  line-height: 1.50;
+  color: var(--grey);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 70vw;
+  max-width: 550px;
+}
+
+h1, h2 {
+  margin: .5em 0 .1em 0;
+}
+
+a {
+  color: var(--grey);
+}
+
+a:visited {
+  color: var(--visited) 
+}
+
+a:hover, a:focus {
+  color: var(--pink)
+}
+
+p {
+  margin: .25em 0 .1em 0;
+}
+
+#logo {
+  width: 30vw;
+  max-width: 250px;
+}
+
+.social-links {
+  margin-top: 1rem;
+}
+
+.social-link {
+  text-decoration: none;
+  border: 2px solid var(--grey);
+  border-left: 4px solid var(--grey);
+  border-bottom: 4px solid var(--grey);
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+
+.social-link:visited {
+  background-color: var(--white);
+  color: var(--grey);
+}
+
+.social-link:hover, .social-link:focus {
+  border-color: var(--visited-selected);
+  background-color: var(--pink);
+  border-left: 2px solid var(--visited-selected);
+  border-bottom: 2px solid var(--visited-selected);
+  color: var(--white);
+}
+
+.pi-info {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  
+   ;
+  min-width: 100px;
+  margin: 1em;
+}
+
+footer {
+  color: val();
+  font-size: .5em;
+}
+
+h3 {
+  margin: .2em 0 .1em 0;
+}

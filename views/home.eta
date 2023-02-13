@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><j.cooper></title>
-</head>
-<body>
-  <img 
-    src="/images/logo-transparent.png"
-    alt="j.cooper as an html tag"
-    id=""
-    aria>
-  <h1>Hey, I'm Jordan</h1>
-  <h2>A fullstack developer working at <a href="https://www.iqualify.com" target="_blank">iQualify LMS</a></h2>
-  <div>
-    <button>GitHub</button>
-    <button>LinkedIn</button>
-  </div>  
-  <%~ includeFile('./pi-info', it) %>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title><j.cooper></title>
+  </head>
+  <body>
+    <main>
+      <picture>
+        <source srcset="/images/white-logo.png" media="(prefers-color-scheme: dark)">
+        <img
+        src="/images/color-logo.png"
+          alt="My logo, j.cooper as an html tag"
+          role="banner"
+          id="logo">
+      </picture>
+      <h1>Hey, I'm Jordan!</h1>
+      <p>
+        A fullstack developer working at <a href="https://www.iqualify.com" target="_blank">iQualify LMS</a>
+      </p>
+      <div class="social-links">
+        <a href="#" target="__blank" class="social-link">GitHub</a>
+        <a href="#" target="__blank" class="social-link">LinkedIn</a>
+      </div>
+    </main>
+    <%~ includeFile('./pi-info', it) %>
+  </body>
 </html>
