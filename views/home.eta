@@ -19,17 +19,19 @@
       </picture>
       <h1>Hey, I'm Jordan!</h1>
       <p>
-        A fullstack developer working at <a href="https://www.iqualify.com" target="_blank">iQualify LMS</a>
+        A fullstack developer working at <a href="https://www.iqualify.com" target="_blank" class="company-link">iQualify LMS</a>
       </p>
       <div class="social-links">
         <a
           href="https://github.com/jordy1311"
-          target="__blank">
+          target="__blank"
+          class="social-link">
           GitHub
         </a>
         <a
           href="https://www.linkedin.com/in/jordan-cooper-7b0b82162"
-          target="__blank">
+          target="__blank"
+          class="social-link">
           LinkedIn
         </a>
       </div>

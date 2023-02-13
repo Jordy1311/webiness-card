@@ -1,5 +1,5 @@
 :root {
-  --visited-selected: #444444;
+  --visited-selected: #303030;
   --grey: #797979;
   --pink: #ec7b85;
   --blue: #83D1E0;
@@ -61,19 +61,18 @@ h3 {
 }
 
 p {
+  font-weight: 300;
   margin: .25rem 0 .1rem 0;
 }
 
 a {
+  text-decoration: none;
   color: var(--grey);
 }
 
-a:visited {
-  /* color: var(--blue) */
-}
-
 a:hover, a:focus {
-  color: var(--pink)
+  color: var(--visited-selected)
+  
 }
 
 #logo {
@@ -81,8 +80,29 @@ a:hover, a:focus {
   max-width: 250px;
 }
 
+.company-link {
+  text-decoration: underline;
+  color: var(--pink)
+}
+
 .social-links {
   margin-top: 1rem;
+}
+
+.social-link {
+  margin-right: .2rem;
+  padding: .5rem 1rem;
+  border: .1rem solid var(--grey);
+  border-radius: 8px;
+
+  border-left: .2rem solid var(--grey);
+  border-bottom: .2rem solid var(--grey);
+}
+
+.social-link:hover, .social-link:focus {
+  border: .1rem solid var(--grey);
+  color: var(--grey);
+  margin-right: .3rem;
 }
 
 .pi-info {
