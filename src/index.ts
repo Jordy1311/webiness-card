@@ -23,12 +23,12 @@ app.get("/", function (_, res) {
 
 app.listen(port, () => {
   const timestamp: String = new Date().toLocaleString();
-  console.log(`Server is listening on port: ${port} at ${timestamp}`);
+  console.log(`Listening to port: ${port} at ${timestamp}`);
 });
 
 // closes port gracefully
 process.on('SIGINT', () => {
   const timestamp: String = new Date().toLocaleString();
-  console.log(`\nServer is closing down port: ${port} at ${timestamp}`);
-  process.exit(0);
+  console.log(`\nClosing down port: ${port} at ${timestamp}`);
+  process.exit();
 });
