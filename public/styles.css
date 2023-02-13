@@ -2,6 +2,7 @@
   --visited-selected: #444444;
   --grey: #797979;
   --pink: #ec7b85;
+  --blue: #83D1E0;
   --white: #ffffff;
   --black: #000000;
 }
@@ -9,11 +10,11 @@
 /* work this out */
 @media (prefers-color-scheme: dark) {
   :root {
-    --visited-selected: #fefefe;
-    --grey: #929292;
-    --pink: #ec7b85;
-    --white: #797979;
-    background-color: #202020;
+    /* --visited-selected: #fefefe; */
+    /* --grey: #929292; */
+    /* --pink: #ec7b85; */
+    /* --white: #797979; */
+    /* background-color: #202020; */
   }
 
   .social-link:hover, .social-link:focus {
@@ -21,8 +22,8 @@
 }
 
 :focus {
-  outline: 2px solid var(--pink);
-  outline-offset: 8px;
+  outline: 3px solid var(--pink);
+  outline-offset: 6px;
   border-radius: 8px;
 }
 
@@ -31,7 +32,7 @@ html {
   width: 100vw;
 
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   line-height: 1.50;
   color: var(--grey);
 
@@ -46,8 +47,21 @@ main {
   max-width: 550px;
 }
 
+footer {
+  color: val();
+  font-size: .5rem;
+}
+
 h1, h2 {
-  margin: .5em 0 .1em 0;
+  margin: .4rem 0 .1rem 0;
+}
+
+h3 {
+  margin: .2rem 0 .1rem 0;
+}
+
+p {
+  margin: .25rem 0 .1rem 0;
 }
 
 a {
@@ -55,15 +69,11 @@ a {
 }
 
 a:visited {
-  color: var(--visited) 
+  /* color: var(--blue) */
 }
 
 a:hover, a:focus {
   color: var(--pink)
-}
-
-p {
-  margin: .25em 0 .1em 0;
 }
 
 #logo {
@@ -75,43 +85,10 @@ p {
   margin-top: 1rem;
 }
 
-.social-link {
-  text-decoration: none;
-  border: 2px solid var(--grey);
-  border-left: 4px solid var(--grey);
-  border-bottom: 4px solid var(--grey);
-  border-radius: 8px;
-  padding: 8px 16px;
-}
-
-.social-link:visited {
-  background-color: var(--white);
-  color: var(--grey);
-}
-
-.social-link:hover, .social-link:focus {
-  border-color: var(--visited-selected);
-  background-color: var(--pink);
-  border-left: 2px solid var(--visited-selected);
-  border-bottom: 2px solid var(--visited-selected);
-  color: var(--white);
-}
-
 .pi-info {
   position: fixed;
   bottom: 0px;
   left: 0px;
-  
-   ;
   min-width: 100px;
-  margin: 1em;
-}
-
-footer {
-  color: val();
-  font-size: .5em;
-}
-
-h3 {
-  margin: .2em 0 .1em 0;
+  margin: 1rem;
 }
