@@ -1,13 +1,11 @@
 import express from 'express';
-import dotenv from 'dotenv';
 import dnsCron from './dns-cron';
 import * as eta from "eta";
 
-dotenv.config();
 dnsCron();
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 app.engine("eta", eta.renderFile);
 app.set("view engine", "eta");
